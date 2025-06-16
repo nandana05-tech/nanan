@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript</title>
+    <style>
+        #wrap {
+            background: black;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="" id="wrap"></div>
+
+    <script>
+        //fungsi
+        function printText(text) {
+            document.getElementById("wrap").innerHTML = text;
+        }
+
+        //fungsi untuk menampilkan pesan
+        function showMessage() {
+            const message = "Selamat datang di Belajar Javascript!";
+            printText(message);
+        }
+        //fungsi untuk menampilkan pesan setelah 2 detik
+        function showMessageAfterDelay() {
+            setTimeout(showMessage, 2000);
+        }
+        //fungsi untuk menampilkan pesan setelah 2 detik
+        function showMessageAfterDelayWithArrow() {
+            setTimeout(() => {
+                const message = "Selamat datang di Belajar Javascript dengan Arrow Function!";
+                printText(message);
+            }, 2000);
+        }
+        //memanggil fungsi
+        showMessage();
+        showMessageAfterDelayWithArrow();
+
+    </script>
+</body>
+</html>
